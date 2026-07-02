@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parfüm Shop | Kontakt</title>
+    <title>Maison Fleur | Kontakt</title>
+    <meta
+      name="description"
+      content="Kontaktseite mit CEO-Informationen und Formular mit Betreffauswahl für Anliegen rund um den Shop."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,11 +15,14 @@
       <div class="container nav-bar">
         <a href="index.html" class="logo">Maison Fleur</a>
         <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-          ☰
+          &#9776;
         </button>
         <nav class="nav-links">
           <a href="index.html">Start</a>
           <a href="produkte.html">Produkte</a>
+          <a href="wishlist.html">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="kontakt.html" class="active">Kontakt</a>
         </nav>
@@ -23,33 +30,67 @@
     </header>
 
     <main class="container section contact-page">
-      <h1>Kontaktiere uns</h1>
-      <p>Hast du Fragen zu unseren Düften oder möchtest du eine Empfehlung?</p>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Fragen, Beratung, Support</p>
+          <h1>Kontaktiere uns</h1>
+          <p class="intro-text">
+            Wir helfen bei Produktauswahl, Bestellung, Versand und individuellen Duftempfehlungen.
+          </p>
+        </div>
+      </div>
 
-      <form id="contactForm" class="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          E-Mail
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Nachricht
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Senden</button>
-        <p id="formMessage" class="form-message"></p>
-      </form>
+      <div class="content-grid">
+        <section class="info-box">
+          <h2>CEO</h2>
+          <div class="team-list">
+            <article class="team-card">
+              <h3>Abedin Balanca</h3>
+              <p>CEO</p>
+              <p>Verantwortlich für Maison Fleur, Sortiment und die strategische Ausrichtung des Shops.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-form-wrap">
+          <form id="contactForm" class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              E-Mail
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Betreff
+              <select name="subject" required>
+                <option value="">Bitte wählen</option>
+                <option value="Produktberatung">Produktberatung</option>
+                <option value="Bestellung">Frage zur Bestellung</option>
+                <option value="Versand">Versand und Lieferung</option>
+                <option value="Rückgabe">Rückgabe oder Reklamation</option>
+              </select>
+            </label>
+            <label>
+              Nachricht
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Nachricht senden</button>
+            <p id="contactMessage" class="form-message"></p>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> Maison Fleur</p>
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Antworten meist innerhalb von 24 Stunden.</p>
       </div>
     </footer>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

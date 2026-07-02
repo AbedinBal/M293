@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parfüm Shop | Über uns</title>
+    <title>Maison Fleur | Über uns</title>
+    <meta
+      name="description"
+      content="Maison Fleur stellt Werte, Beratung und Service rund um hochwertige Düfte vor."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,11 +15,14 @@
       <div class="container nav-bar">
         <a href="index.html" class="logo">Maison Fleur</a>
         <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-          ☰
+          &#9776;
         </button>
         <nav class="nav-links">
           <a href="index.html">Start</a>
           <a href="produkte.html">Produkte</a>
+          <a href="wishlist.html">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
           <a href="ueber-uns.html" class="active">Über uns</a>
           <a href="kontakt.html">Kontakt</a>
         </nav>
@@ -23,31 +30,44 @@
     </header>
 
     <main class="container section about-page">
-      <h1>Unsere Geschichte</h1>
-      <p>
-        Maison Fleur wurde gegründet, um Menschen dabei zu helfen, sich mit
-        Düften auszudrücken, die ihre Persönlichkeit unterstreichen.
-      </p>
-      <p>
-        Wir lieben hochwertige Duftnoten, klare Designs und ein angenehmes
-        Einkaufserlebnis – einfach, elegant und inspirierend.
-      </p>
-      <div class="info-box">
-        <h3>Warum Kunden uns mögen</h3>
-        <ul>
-          <li>Ausgewählte Düfte für jeden Anlass</li>
-          <li>Einfache Bedienung und klare Auswahl</li>
-          <li>freundlicher Kundenservice</li>
-        </ul>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Maison Fleur</p>
+          <h1>Unsere Geschichte</h1>
+        </div>
+      </div>
+      <div class="content-grid">
+        <article class="info-box">
+          <h2>Wofür wir stehen</h2>
+          <p>
+            Maison Fleur wurde gegründet, um Menschen mit ausdrucksstarken Düften zu begleiten.
+            Unsere Kollektion vereint moderne Klassiker mit charakterstarken Kompositionen.
+          </p>
+          <p>
+            Wir achten auf eine klare Produktauswahl, gute Beschreibungen und eine einfache Bestellung
+            ohne komplizierte Zwischenschritte.
+          </p>
+        </article>
+        <article class="info-box">
+          <h2>Warum Kundinnen und Kunden uns wählen</h2>
+          <ul>
+            <li>Direkte Verwaltung von Warenkorb und Merkliste im Browser</li>
+            <li>Einfache Demo für Konto, Login und Logout mit Web Storage API</li>
+            <li>Persönliche Beratung bei Fragen zu Noten, Haltbarkeit und Anlass</li>
+            <li>Responsive Darstellung für Smartphone, Tablet und Desktop</li>
+          </ul>
+        </article>
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> Maison Fleur</p>
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Parfümberatung mit Stil und Klarheit.</p>
       </div>
     </footer>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parfüm Shop | Startseite</title>
+    <title>Maison Fleur | Startseite</title>
     <meta
       name="description"
-      content="Ein einfacher Mehrseiten-Parfümshop mit eleganten Düften und einer schönen Produktübersicht."
+      content="Maison Fleur präsentiert beliebte Düfte, Produktkategorien und eine Newsletter-Anmeldung für exklusive Aktionen."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -15,11 +15,14 @@
       <div class="container nav-bar">
         <a href="index.html" class="logo">Maison Fleur</a>
         <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-          ☰
+          &#9776;
         </button>
         <nav class="nav-links">
           <a href="index.html" class="active">Start</a>
           <a href="produkte.html">Produkte</a>
+          <a href="wishlist.html">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="kontakt.html">Kontakt</a>
         </nav>
@@ -30,63 +33,135 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">Frische, Eleganz, Erinnerung</p>
-            <h1>Entdecke deine Lieblingsdüfte</h1>
-            <p>
-              Entdecke eine Auswahl an edlen Parfums, die jeden Moment in ein
-              besonderes Erlebnis verwandeln.
+            <p class="eyebrow">Signaturdüfte für jeden Moment</p>
+            <h1>Entdecke elegante Parfums mit Charakter</h1>
+            <p class="hero-copy">
+              Maison Fleur kombiniert florale, frische, holzige und orientalische
+              Noten in einer kuratierten Kollektion für Alltag, Business und
+              besondere Abende.
             </p>
-            <a class="btn btn-primary" href="produkte.html">Jetzt entdecken</a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="produkte.html">Alle Produkte ansehen</a>
+              <a class="btn btn-secondary" href="#newsletter">Newsletter sichern</a>
+            </div>
           </div>
-          <div class="hero-card">
-            <h3>Neu im Sortiment</h3>
-            <p>Velvet Bloom – ein blumiger Duft mit warmen Akkorden.</p>
-            <span class="price">ab 79 €</span>
-          </div>
+          <aside class="hero-card">
+            <p class="badge">Neu im Sortiment</p>
+            <h2>Bleu de Chanel</h2>
+            <p>
+              Ein frischer und zugleich tiefer Duft mit Zitrus, Weihrauch und
+              holziger Signatur für Alltag und Abend.
+            </p>
+            <span class="price">92 CHF</span>
+            <a class="text-link" href="detail.html?id=bleu-de-chanel">Zur Produktdetailseite</a>
+          </aside>
         </div>
       </section>
 
       <section class="container section">
-        <h2>Unsere Bestseller</h2>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Beliebt bei unseren Kundinnen und Kunden</p>
+            <h2>Unsere Bestseller</h2>
+          </div>
+          <a class="text-link" href="produkte.html">Zur gesamten Kollektion</a>
+        </div>
         <div class="card-grid">
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=80"
-              alt="Parfümflakon"
-            />
-            <h3>Noir Velvet</h3>
-            <p>Intensiv, elegant und sinnlich.</p>
-            <span>89 €</span>
+          <article class="card product-card">
+            <img src="images/r9qDjWnWLxVu9YA94BA62E.jpg" alt="Tom Ford Eau de Grey Vetiver" />
+            <div class="card-body">
+              <p class="card-category">Holzig</p>
+              <h3>Tom Ford Eau de Grey Vetiver</h3>
+              <p>Eleganter Vetiverduft mit Zitrus und klarer holziger Struktur.</p>
+              <div class="card-meta">
+                <span>89 CHF</span>
+                <a class="text-link" href="detail.html?id=tom-ford-grey-vetiver">Details</a>
+              </div>
+            </div>
           </article>
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
-              alt="Parfümflakon"
-            />
-            <h3>Golden Hour</h3>
-            <p>Frisch, sonnig und modern.</p>
-            <span>74 €</span>
+          <article class="card product-card">
+            <img src="images/2400x2400px S4_0874 NOgrana.jpg" alt="Acqua di Parma Bergamotto di Calabria La Spugnatura" />
+            <div class="card-body">
+              <p class="card-category">Frisch</p>
+              <h3>Acqua di Parma Bergamotto</h3>
+              <p>Mediterrane Bergamotte und helle Frische für warme Tage.</p>
+              <div class="card-meta">
+                <span>74 CHF</span>
+                <a class="text-link" href="detail.html?id=acqua-di-parma-bergamotto">Details</a>
+              </div>
+            </div>
           </article>
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=900&q=80"
-              alt="Parfümflakon"
-            />
-            <h3>Moonlight Mist</h3>
-            <p>Weich, romantisch und weich duftend.</p>
-            <span>84 €</span>
+          <article class="card product-card">
+            <img src="images/armani-stronger-with-you-leather.png" alt="Emporio Armani Stronger With You Leather" />
+            <div class="card-body">
+              <p class="card-category">Holzig</p>
+              <h3>Stronger With You Leather</h3>
+              <p>Leder, Kastanie und Lavendel für einen kräftigen Charakterduft.</p>
+              <div class="card-meta">
+                <span>101 CHF</span>
+                <a class="text-link" href="detail.html?id=armani-stronger-with-you-leather">Details</a>
+              </div>
+            </div>
           </article>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Schnell zur passenden Auswahl</p>
+            <h2>Produktkategorien</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="produkte.html?category=Floral">
+            <h3>Floral</h3>
+            <p>Rosige und sanfte Düfte für einen leichten, femininen Stil.</p>
+          </a>
+          <a class="category-card" href="produkte.html?category=Frisch">
+            <h3>Frisch</h3>
+            <p>Zitrische und aquatische Kompositionen für Alltag und Sommer.</p>
+          </a>
+          <a class="category-card" href="produkte.html?category=Holzig">
+            <h3>Holzig</h3>
+            <p>Kräftige Noten mit Tiefe für Business, Abend und Statement-Looks.</p>
+          </a>
+          <a class="category-card" href="produkte.html?category=Orientalisch">
+            <h3>Orientalisch</h3>
+            <p>Warme Gewürze, Vanille und Amber für besondere Anlässe.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="container section">
+        <div class="newsletter-panel" id="newsletter">
+          <div>
+            <p class="eyebrow">Immer zuerst informiert</p>
+            <h2>Newsletter abonnieren</h2>
+            <p>
+              Erhalte Aktionen, Produktneuheiten und Dufttipps direkt per E-Mail.
+            </p>
+          </div>
+          <form id="newsletterForm" class="newsletter-form">
+            <label>
+              E-Mail-Adresse
+              <input type="email" name="newsletterEmail" placeholder="name@beispiel.ch" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Jetzt anmelden</button>
+            <p id="newsletterMessage" class="form-message"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> Maison Fleur</p>
-        <p>Parfümshop für besondere Momente.</p>
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Feine Düfte für besondere Momente.</p>
       </div>
     </footer>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

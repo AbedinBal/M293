@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Fleur | Merkliste</title>
+    <meta name="description" content="Merkliste mit lokal gespeicherten Lieblingsdüften." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="logo">Maison Fleur</a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          &#9776;
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Start</a>
+          <a href="produkte.html">Produkte</a>
+          <a href="wishlist.html" class="active">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Gespeicherte Favoriten</p>
+          <h1>Merkliste</h1>
+        </div>
+      </div>
+      <section id="wishlistGrid" class="card-grid"></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Deine Favoriten bleiben lokal im Browser gespeichert.</p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

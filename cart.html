@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Fleur | Warenkorb</title>
+    <meta name="description" content="Warenkorb mit Mengensteuerung und Bestellformular." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="logo">Maison Fleur</a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          &#9776;
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Start</a>
+          <a href="produkte.html">Produkte</a>
+          <a href="wishlist.html">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html" class="active">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Deine Auswahl</p>
+          <h1>Warenkorb</h1>
+        </div>
+      </div>
+      <div class="cart-layout">
+        <section id="cartItems" class="cart-items"></section>
+        <aside class="cart-summary">
+          <div id="cartSummary" class="info-box"></div>
+          <form id="checkoutForm" class="order-form">
+            <label>
+              Vollständiger Name
+              <input type="text" name="customerName" required />
+            </label>
+            <label>
+              E-Mail
+              <input type="email" name="customerEmail" required />
+            </label>
+            <label>
+              Lieferadresse
+              <textarea name="address" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Bestellung absenden</button>
+            <p id="checkoutMessage" class="form-message"></p>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Warenkorb lokal gespeichert mit Web Storage API.</p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parfüm Shop | Produkte</title>
+    <title>Maison Fleur | Produkte</title>
+    <meta
+      name="description"
+      content="Alle Produkte von Maison Fleur mit Kategoriefilter, Merkliste und Warenkorb."
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -11,11 +15,14 @@
       <div class="container nav-bar">
         <a href="index.html" class="logo">Maison Fleur</a>
         <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-          ☰
+          &#9776;
         </button>
         <nav class="nav-links">
           <a href="index.html">Start</a>
           <a href="produkte.html" class="active">Produkte</a>
+          <a href="wishlist.html">Merkliste (<span data-wishlist-count>0</span>)</a>
+          <a href="cart.html">Warenkorb (<span data-cart-count>0</span>)</a>
+          <a href="account.html">Konto</a>
           <a href="ueber-uns.html">Über uns</a>
           <a href="kontakt.html">Kontakt</a>
         </nav>
@@ -23,44 +30,34 @@
     </header>
 
     <main class="container section">
-      <h1>Unsere Düfte</h1>
-      <p class="intro-text">
-        Von blumig bis warm und maskulin – hier findest du etwas für jede Stimmung.
-      </p>
-      <div class="card-grid">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80" alt="Parfümflakon" />
-          <h3>Rose Éclair</h3>
-          <p>Blumig, frisch und elegant.</p>
-          <span>69 €</span>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=900&q=80" alt="Parfümflakon" />
-          <h3>Amber Night</h3>
-          <p>Warm, sinnlich und sehr markant.</p>
-          <span>92 €</span>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=80" alt="Parfümflakon" />
-          <h3>Citrus Breeze</h3>
-          <p>Frisch, leicht und perfekt für den Alltag.</p>
-          <span>59 €</span>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=900&q=80" alt="Parfümflakon" />
-          <h3>Velvet Bloom</h3>
-          <p>Weich, blumig und einladend.</p>
-          <span>79 €</span>
-        </article>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Kollektion 2026</p>
+          <h1>Unsere Düfte</h1>
+          <p class="intro-text">
+            Filtere alle Produkte nach Kategorie und lege Produkte direkt in Merkliste oder Warenkorb.
+          </p>
+        </div>
       </div>
+
+      <section class="filter-panel">
+        <div class="filter-actions" id="categoryFilters" aria-label="Produkte nach Kategorien filtern"></div>
+      </section>
+
+      <section>
+        <div id="productCount" class="result-count"></div>
+        <div id="productGrid" class="card-grid product-grid"></div>
+      </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© <span id="year"></span> Maison Fleur</p>
+        <p>&copy; <span id="year"></span> Maison Fleur</p>
+        <p>Kuratiert für Alltag, Events und besondere Geschenke.</p>
       </div>
     </footer>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
