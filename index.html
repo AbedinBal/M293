@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parfüm Shop | Startseite</title>
+    <meta
+      name="description"
+      content="Ein einfacher Mehrseiten-Parfümshop mit eleganten Düften und einer schönen Produktübersicht."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="logo">Maison Fleur</a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          ☰
+        </button>
+        <nav class="nav-links">
+          <a href="index.html" class="active">Start</a>
+          <a href="produkte.html">Produkte</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Frische, Eleganz, Erinnerung</p>
+            <h1>Entdecke deine Lieblingsdüfte</h1>
+            <p>
+              Entdecke eine Auswahl an edlen Parfums, die jeden Moment in ein
+              besonderes Erlebnis verwandeln.
+            </p>
+            <a class="btn btn-primary" href="produkte.html">Jetzt entdecken</a>
+          </div>
+          <div class="hero-card">
+            <h3>Neu im Sortiment</h3>
+            <p>Velvet Bloom – ein blumiger Duft mit warmen Akkorden.</p>
+            <span class="price">ab 79 €</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Unsere Bestseller</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img
+              src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=900&q=80"
+              alt="Parfümflakon"
+            />
+            <h3>Noir Velvet</h3>
+            <p>Intensiv, elegant und sinnlich.</p>
+            <span>89 €</span>
+          </article>
+          <article class="card">
+            <img
+              src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=80"
+              alt="Parfümflakon"
+            />
+            <h3>Golden Hour</h3>
+            <p>Frisch, sonnig und modern.</p>
+            <span>74 €</span>
+          </article>
+          <article class="card">
+            <img
+              src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=900&q=80"
+              alt="Parfümflakon"
+            />
+            <h3>Moonlight Mist</h3>
+            <p>Weich, romantisch und weich duftend.</p>
+            <span>84 €</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Maison Fleur</p>
+        <p>Parfümshop für besondere Momente.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parfüm Shop | Kontakt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="logo">Maison Fleur</a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+          ☰
+        </button>
+        <nav class="nav-links">
+          <a href="index.html">Start</a>
+          <a href="produkte.html">Produkte</a>
+          <a href="ueber-uns.html">Über uns</a>
+          <a href="kontakt.html" class="active">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section contact-page">
+      <h1>Kontaktiere uns</h1>
+      <p>Hast du Fragen zu unseren Düften oder möchtest du eine Empfehlung?</p>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          E-Mail
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Nachricht
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Senden</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Maison Fleur</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
